@@ -40,6 +40,9 @@
             this.gameOnlineToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tVKabelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,18 +125,46 @@
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             this.imageList1.Images.SetKeyName(0, "Wallpaper Lampu Gantung - Kartunlucu.Com.jpg");
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(385, -2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 26);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(277, -2);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 26);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "label2";
+            // 
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::WindowsFormsApplication1.Properties.Resources.Multi_Channel_Payments;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(473, 421);
+            this.ClientSize = new System.Drawing.Size(473, 429);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.DoubleBuffered = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Menu";
             this.Text = "Menu Utama";
+            this.Load += new System.EventHandler(this.Menu_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -153,5 +184,8 @@
         private System.Windows.Forms.ToolStripMenuItem gameOnlineToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tVKabelToolStripMenuItem;
         private System.Windows.Forms.ImageList imageList1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Timer timer1;
     }
 }

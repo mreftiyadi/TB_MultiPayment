@@ -49,5 +49,16 @@ namespace WindowsFormsApplication1
             TV_kabel tv = new TV_kabel();
             tv.ShowDialog();
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToString("hh:mm:ss");
+        }
+
+        private void Menu_Load(object sender, EventArgs e)
+        {
+            label2.Text = DateTime.Now.ToString("dd/MM/yyyy");
+            timer1.Enabled = true;
+        }
     }
 }
