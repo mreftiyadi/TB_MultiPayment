@@ -43,14 +43,21 @@ namespace WindowsFormsApplication1
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            int bayar = int.Parse(textNama.Text);
-            if (comboBox1.SelectedIndex == 0)
+            try
             {
-                textBay.Text = (bayar * 55500).ToString();
+                int bayar = int.Parse(textNama.Text);
+                if (comboBox1.SelectedIndex == 0)
+                {
+                    textBay.Text = (bayar * 55500).ToString();
+                }
+                else if (comboBox1.SelectedIndex == 1)
+                {
+                    textBay.Text = (bayar * 105000).ToString();
+                }
             }
-            else if (comboBox1.SelectedIndex == 1)
+            catch (FormatException)
             {
-                textBay.Text = (bayar*105000).ToString();
+                MessageBox.Show(this, "Karakter Exceptionn : Found!", "Persegi", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -113,6 +120,11 @@ namespace WindowsFormsApplication1
             textNama.Text = dataGridView1.Rows[n].Cells[4].Value.ToString();
             comboBox1.Text = dataGridView1.Rows[n].Cells[5].Value.ToString();
             textBay.Text = dataGridView1.Rows[n].Cells[6].Value.ToString();
+        }
+
+        private void textBay_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

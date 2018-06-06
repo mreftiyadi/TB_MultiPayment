@@ -137,5 +137,10 @@ namespace WindowsFormsApplication1
             koneksidb.Close();
             MessageBox.Show("Change Success!!", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

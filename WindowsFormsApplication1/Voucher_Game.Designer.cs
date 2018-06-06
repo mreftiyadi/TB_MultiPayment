@@ -112,6 +112,7 @@
             this.textBay.ShortcutsEnabled = false;
             this.textBay.Size = new System.Drawing.Size(279, 33);
             this.textBay.TabIndex = 31;
+            this.textBay.TextChanged += new System.EventHandler(this.textBay_TextChanged);
             // 
             // label4
             // 
